@@ -11,11 +11,11 @@ import java.util.List;
 public class TaskUseCase {
     private final TaskRepository repository;
 
-    Mono<Task> createTask(Task task) {
+    public Mono<Task> createTask(Task task) {
         return repository.save(task);
     }
 
-    Mono<List<Task>> findAllTask() {
+    public Mono<List<Task>> findAllTask() {
         return repository.findAll();
     }
 }
